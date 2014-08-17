@@ -1,0 +1,30 @@
+{
+  "name": "dustjs-helper-maxlength",
+  "version": "0.0.1",
+  "author": {
+    "name": "Federico Rampazzo",
+    "email": "frampone@gmail.com",
+    "url": "http://framp.me"
+  },
+  "description": "Cut text up to a certain limit, without breaking words and adding ellipsis",
+  "keywords": [
+    "substr",
+    "ellipsis",
+    "breaking",
+    "words",
+    "maxlength",
+    "helper",
+    "helpers",
+    "dust",
+    "dustjs"
+  ],
+  "main": "./maxlength.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/framp/dustjs-helper-maxlength.git"
+  },
+  "license": "MIT",
+  "engine": {
+    "node": ">=0.5"
+  }
+}
