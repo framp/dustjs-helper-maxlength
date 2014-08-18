@@ -1,11 +1,13 @@
 (function(dust){
 dust.helpers.maxlength = function (chunk, ctx, bodies, params) {
-  var str = dust.helpers.tap(params.str, chunk, ctx);
+  var str = dust.helpers.tap(params.str, chunk, ctx) || '';
   var originalLength = str.length;
   var breakWord = dust.helpers.tap(params.break, chunk, ctx) === 'true';
   var limitByWord = dust.helpers.tap(params.type, chunk, ctx) === 'words';
   var limit = parseInt(dust.helpers.tap(params.limit, chunk, ctx)) || originalLength;
   var ellipsis = dust.helpers.tap(params.ellipsis, chunk, ctx);
+  if (originalLength==0)
+    return chunk.write(str);
   if (typeof(ellipsis) === 'undefined')
     ellipsis = '...';
   
